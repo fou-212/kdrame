@@ -1,4 +1,4 @@
-# kdrame
+# Korejske drame
 
 Za izvršavanje zahtjeva predmeta otvoreno računarstvo je u sklopu prve laboratorijske vježbe napravljen otvoren skup podataka o korejskim drama. Skup sadrži razne informacije o nekim meni dragim dramama kao što su naziv, redatelj, glumci, itd. Moguće je preuzeti u JSON i CSV formatu, a postoji i dump baze.
 

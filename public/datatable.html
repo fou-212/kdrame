@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8">
+  <title>Korejske drame - tablica</title>
+  <meta name="description" content="Tablični prikaz i pretraga skupa podataka o korejskim dramama.">
+  <meta name="author" content="Arjana Ivković">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Korejske drame - tablica</h1>
+
+  <form id="form">
+    <input type="text" id="q">
+    <select id="atr">
+      <option value="sve">Svi atributi</option>
+      <option value="naziv">Naziv</option>
+      <option value="godina">Godina</option>
+      <option value="broj_epizoda">Broj epizoda</option>
+      <option value="ocjena">Ocjena</option>
+      <option value="tv_kuca">TV kuća</option>
+      <option value="redatelj">Redatelj</option>
+      <option value="zanr">Žanr</option>
+      <option value="glumci">Glumci</option>
+    </select>
+    <button type="submit">Traži</button>
+  </form>
+
+  <p>
+    Preuzmi prikaz:
+    <a id="csv" href="/api/drame.csv">CSV</a> |
+    <a id="json" href="/api/drame.json">JSON</a>
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Naziv</th><th>Godina</th><th>Epizode</th><th>Ocjena</th>
+        <th>TV kuća</th><th>Redatelj</th><th>Žanr</th><th>Glumci</th>
+      </tr>
+    </thead>
+    <tbody id="tab"></tbody>
+  </table>
+
+  <script src="datatable.js"></script>
+</body>
+</html>

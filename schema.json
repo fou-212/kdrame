@@ -1,0 +1,71 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "https://raw.githubusercontent.com/fou-212/kdrame/main/schema.json",
+  "title": "Korejske drame",
+  "description": "Otvoreni skup podataka o korejskim dramama.",
+  "type": "array",
+  "items": {
+    "type": "object",
+    "title": "Drama",
+    "description": "Objekt koji sadrži sve podatke o jednoj korejskoj drami.",
+    "required": ["Naziv", "Godina", "Broj_epizoda", "Tv_kuca", "Redatelj", "Zanr", "Glumci"],
+    "properties": {
+      "Naziv": {
+        "type": "string",
+        "title": "Naziv",
+        "description": "Naziv drame."
+      },
+      "Godina": {
+        "type": "integer",
+        "title": "Godina",
+        "description": "Godina izlaska drame."
+      },
+      "Broj_epizoda": {
+        "type": "integer",
+        "title": "Broj epizoda",
+        "description": "Ukupan broj epizoda."
+      },
+      "Ocjena": {
+        "type": ["number", "null"],
+        "title": "Ocjena",
+        "description": "Osobna ocjena autorice na ljestvici 0-10."
+      },
+      "Tv_kuca": {
+        "type": "string",
+        "title": "TV kuća",
+        "description": "Televizijska kuća koja je emitirala dramu."
+      },
+      "Redatelj": {
+        "type": "object",
+        "title": "Redatelj",
+        "description": "Podaci o redatelju drame.",
+        "required": ["Ime", "Prezime"],
+        "properties": {
+          "Ime": { "type": "string", "title": "Ime", "description": "Ime redatelja." },
+          "Prezime": { "type": "string", "title": "Prezime", "description": "Prezime redatelja." }
+        }
+      },
+      "Zanr": {
+        "type": "array",
+        "title": "Žanr",
+        "description": "Popis žanrova drame.",
+        "items": { "type": "string" }
+      },
+      "Glumci": {
+        "type": "array",
+        "title": "Glumci",
+        "description": "Popis glumaca u drami.",
+        "items": {
+          "type": "object",
+          "title": "Glumac",
+          "description": "Podaci o jednom glumcu.",
+          "required": ["Ime", "Prezime"],
+          "properties": {
+            "Ime": { "type": "string", "title": "Ime", "description": "Ime glumca." },
+            "Prezime": { "type": "string", "title": "Prezime", "description": "Prezime glumca." }
+          }
+        }
+      }
+    }
+  }
+}

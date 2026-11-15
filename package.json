@@ -1,0 +1,17 @@
+{
+  "name": "kdrame",
+  "version": "1.0.0",
+  "description": "Za izvršavanje zahtjeva predmeta otvoreno računarstvo je u sklopu prve laboratorijske vježbe napravljen otvoren skup podataka o korejskim drama. Skup sadrži razne informacije o nekim meni dragim dramama kao što su naziv, redatelj, glumci, itd. Moguće je preuzeti u JSON i CSV formatu, a postoji i dump baze.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^18.0.10",
+    "express": "^5.3.0",
+    "pg": "^8.23.1"
+  }
+}
